@@ -28,9 +28,35 @@ Desarrollar un sistema que permita calcular la nómina de empleados aplicando:
 ---
 
 ## 👥 Integrantes del CIPA
-- Jaime  
-- Daniel  
-- Daniela  
+Distribucion del proyecto
+- Jaime:
+  Responsable de la base del sistema:
+  Estructura del proyecto en NetBeans
+  Clase abstracta Empleado
+  Modelos Usuario y Rol
+  Servicio de autenticación
+  Navegación (AppNavigator)
+  Interfaz de inicio de sesión (LoginView)
+  Configuración del proyecto (Maven)
+  Pruebas unitarias de autenticación
+- Daniel
+  Responsable de la gestión de empleados:
+  Clase EmpleadoAsalariado
+  Clase EmpleadoPorHoras
+  Lógica de cálculo de salarios y beneficios
+  Validaciones de datos
+  Vista de registro (RegistroEmpleadoView)
+  Pruebas unitarias de cálcul
+- Daniela
+  Responsable del cálculo de nómina:
+  Clase EmpleadoPorComision
+  Clase EmpleadoTemporal
+  Servicio de deducciones (DeduccionService)
+  Servicio de beneficios (BeneficioService)
+  Servicio principal (NominaService)
+  Repositorio de empleados
+  Vista de cálculo (NominaView)
+  Pruebas unitarias
 
 ---
 
