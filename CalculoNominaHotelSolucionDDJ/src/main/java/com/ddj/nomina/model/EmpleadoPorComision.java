@@ -1,0 +1,43 @@
+/**
+ * Clase que representa un empleado por comisión.
+ * Su salario depende del salario base y del valor de las ventas realizadas.
+ */
+package com.ddj.nomina.model;
+
+public class EmpleadoPorComision extends Empleado {
+    private double ventas;
+    private double porcentajeComision;
+
+    public EmpleadoPorComision(int id, String nombre, String identificacion,
+                               int aniosEmpresa, double salarioBase,
+                               double ventas, double porcentajeComision) {
+        super(id, nombre, identificacion, aniosEmpresa, salarioBase);
+
+        if (ventas < 0) {
+            throw new IllegalArgumentException("Las ventas no pueden ser negativas.");
+        }
+        if (porcentajeComision < 0) {
+            throw new IllegalArgumentException("El porcentaje de comisión no puede ser negativo.");
+        }
+
+        this.ventas = ventas;
+        this.porcentajeComision = porcentajeComision;
+    }
+/**
+     * Calcula el salario bruto como salario base más comisión sobre ventas.
+     */
+    @Override
+    public double calcularSalarioBruto() {
+        return salarioBase + (ventas * porcentajeComision);
+    }
+
+    @Override
+    public double calcularBeneficios() {
+        double bonoVentas = 0.0;
+        if (ventas > 20_000_000) {
+            bonoVentas = ventas * 0.03;
+        }
+        double bonoAlimentacion = 1_000_000;
+        return bonoVentas + bonoAlimentacion;
+    }
+}
