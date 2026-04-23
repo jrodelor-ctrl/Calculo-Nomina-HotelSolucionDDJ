@@ -1,0 +1,7 @@
+com\ddj\nomina\service\DeduccionService.class
+com\ddj\nomina\service\NominaService.class
+com\ddj\nomina\service\BeneficioService.class
+com\ddj\nomina\service\EmpleadoRepository.class
+com\ddj\nomina\model\Empleado.class
+com\ddj\nomina\model\EmpleadoTemporal.class
+com\ddj\nomina\ui\NominaView.class
